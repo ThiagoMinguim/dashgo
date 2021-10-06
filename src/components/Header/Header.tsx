@@ -55,7 +55,7 @@ export function Header() {
         </HStack>
         <Flex align="center">
           <Box mr="4" textAlign="right">
-            <Text>Thiago Minguim</Text>
+            <Text>Thiago Minguim de Melo</Text>
             <Text color="gray.300" fontSize="smaill">
               thiago.minguim@hotmail.com
             </Text>
