@@ -8,7 +8,7 @@ import {
   Button,
   HStack
 } from '@chakra-ui/react'
-import { Header } from '../../components/Header'
+import { Header } from '../../components/Header/Index'
 import { Sidebar } from '../../components/Sidebar'
 import { Input } from '../../components/Form/Input'
 
