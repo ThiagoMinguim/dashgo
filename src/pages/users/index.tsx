@@ -20,17 +20,21 @@ import { RiAddLine, RiPencilLine } from 'react-icons/ri'
 import { Header } from '../../components/Header/Index'
 import { Pagination } from '../../components/Pagination/Index'
 import { Sidebar } from '../../components/Sidebar/Index'
+import { useQuery } from 'react-query'
 
 export default function UserList() {
+  const query = useQuery('users', async () => {
+    const response = await fetch('http://localhost:3000/api/users')
+    const data = await response.json()
+
+    return data
+  })
+
+  console.log(query)
+
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true
-  })
-
-  useEffect(() => {
-    fetch('http://localhost:3000/api/users')
-      .then(res => res.json())
-      .then(data => console.log(data))
   })
 
   return (
